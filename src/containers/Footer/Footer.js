@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import { colors } from '../../utils/styles'
+import Logo from '../../components/Logo/Logo'
 
 export default class Footer extends Component {
   render () {
     return (
       <div className={css(styles.footerContainer)}>
-        Footer
+        <Logo light={true} />
       </div>
     )
   }
@@ -14,7 +15,7 @@ export default class Footer extends Component {
 
 const styles = StyleSheet.create({
   footerContainer: {
-    padding: '20px 0px 20px 0px',
+    padding: '20px 0px',
     width: '100vw',
     display: 'flex',
     flexDirection: 'row',

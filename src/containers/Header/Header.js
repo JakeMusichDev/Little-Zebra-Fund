@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import { colors } from '../../utils/styles'
+import Logo from '../../components/Logo/Logo'
 
 export default class Header extends Component {
   render () {
@@ -8,7 +9,7 @@ export default class Header extends Component {
       <div>
         <div className={css(styles.headerStripe)} />
         <div className={css(styles.headerContainer)}>
-          Header
+          <Logo light={false} />
         </div>
       </div>
 
@@ -18,7 +19,7 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    padding: '20px 0px 20px 0px',
+    padding: '15px 0px',
     width: '100vw',
     display: 'flex',
     flexDirection: 'row',

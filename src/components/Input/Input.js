@@ -12,17 +12,13 @@ const Input = (props) => {
 
 const inputStyle = StyleSheet.create({
   inputContainer: {
-    padding: '5px',
-    border: '1px solid cyan',
     display: 'flex',
     justifyContent: 'center',
     alignContent: 'center',
-    [breakPoints.tablet]: {
-      paddingTop: '2%'
-    },
-    [breakPoints.mobile]: {
-      paddingTop: '1%'
-    }
+    border: '1px solid cyan',
+    padding: '5px',
+    [breakPoints.tablet]: { paddingTop: '2%'},
+    [breakPoints.mobile]: { paddingTop: '1%' }
   }
 })
 
