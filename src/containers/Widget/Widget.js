@@ -27,6 +27,9 @@ export default class Widget extends Component {
             <input type="text"/>
           </Input>
           <Input>
+            <input type="text"/>
+          </Input>
+          <Input>
             <input type="submit"/>
           </Input>
         </div>
