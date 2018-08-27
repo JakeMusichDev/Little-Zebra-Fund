@@ -5,7 +5,7 @@ const Button = props => {
   const btnStyle = {
     height: 30,
     width: 100,
-    margin: 5,
+    marginRight: `${props.margin}`,
     color: 'white',
     background: `${props.color}`,
     border: 'none',

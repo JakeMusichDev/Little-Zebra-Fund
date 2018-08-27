@@ -6,7 +6,7 @@ import { colors } from '../../utils/styles'
 import Input from '../../components/Input/Input'
 import Banner from '../../components/Banner/Banner'
 import Button from '../../components/Button/Button'
-import Dropdown from '../../components/Dropdown/Dropdown'
+import WidgetDropdown from '../../components/WidgetDropdown/WidgetDropdown'
 import WidgetButtonGroup from '../../components/WidgetButtonGroup/WidgetButtonGroup'
 import WidgetCheckbox from '../../components/WidgetCheckbox/WidgetCheckbox'
 import img from '../../assets/tiger-image.jpg'
@@ -32,7 +32,7 @@ export default class Widget extends Component {
         <div className={css(widgetStyles.formContainer)}>
           <h3 style={{color:`${colors.green}`, textAlign: 'center'}}>MAKE A DONATION</h3>
           <Input>
-            <Dropdown />
+            <WidgetDropdown />
           </Input>
           <Input>
             <WidgetButtonGroup />
@@ -41,7 +41,7 @@ export default class Widget extends Component {
             <WidgetCheckbox />
           </Input>
           <Input>
-            <Button controlFunc={this.submitForm} text={"DONATE NOW"} color={colors.green}/>
+            <Button controlFunc={this.submitForm} text={"DONATE NOW"} color={colors.green} margin={"0px"}/>
           </Input>
         </div>
         

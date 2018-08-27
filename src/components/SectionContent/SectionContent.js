@@ -12,8 +12,8 @@ const SectionContent = props => {
       <div className={css(styles.body)}>
         <div className={css(styles.bodyText)}>{props.copy}</div>
         {/* <div className={css(styles.bodyBtns)}> */}
-          <Button color={colors.grey} text={'OUR HISTORY'}/>
-          <Button color={colors.yellow} text={'GET INVOLVED'}/>
+          <Button color={colors.grey} text={'OUR HISTORY'} margin={"5px"}/>
+          <Button color={colors.yellow} text={'GET INVOLVED'} margin={"5px"}/>
         {/* </div> */}
       </div>
       <div className={css(styles.banner)}>
