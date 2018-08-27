@@ -12,12 +12,12 @@ const Input = (props) => {
 
 const inputStyle = StyleSheet.create({
   inputContainer: {
-    padding: '3%',
+    paddingTop: '15px',
     [breakPoints.tablet]: {
-      padding: '2%'
+      paddingTop: '2%'
     },
     [breakPoints.mobile]: {
-      padding: '1%'
+      paddingTop: '1%'
     }
   }
 })

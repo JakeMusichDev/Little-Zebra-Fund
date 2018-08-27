@@ -11,7 +11,7 @@ import './App.css';
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div id="app">
         <Header />
           <Section copy={copy.donationSection} >
             <Widget />
