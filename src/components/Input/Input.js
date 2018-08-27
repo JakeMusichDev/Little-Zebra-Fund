@@ -12,8 +12,11 @@ const Input = (props) => {
 
 const inputStyle = StyleSheet.create({
   inputContainer: {
-    paddingTop: '15px',
+    padding: '5px',
     border: '1px solid cyan',
+    display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center',
     [breakPoints.tablet]: {
       paddingTop: '2%'
     },

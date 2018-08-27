@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { StyleSheet, css } from 'aphrodite'
-import {breakPoints} from '../../utils/styles'
+import {breakPoints, colors} from '../../utils/styles'
 
 import Input from '../../components/Input/Input'
 import img from '../../assets/tiger-image.jpg'
@@ -14,10 +14,13 @@ export default class Widget extends Component {
       activeAnimal: {name: 'Giraffe', image: img}
     }
   }
+
+
   
   render () {
     return (
       <div className={css(styles.widgetContainer)}>
+      
         <div className={css(styles.formContainer)}>
           <h3 style={{color:'green', textAlign: 'center'}}>DONATE</h3>
           <Input>
@@ -45,12 +48,11 @@ const styles = StyleSheet.create({
   widgetContainer: {
     border: '1px solid pink',
     height: '100%',
-
+    background: `${colors.widgetWhite}`,
     display: 'flex',
     flexDirection: 'row',
     [breakPoints.tablet]: {
-    flexDirection: 'row',
-
+      flexDirection: 'column',
     },
     [breakPoints.mobile]: {
       flexDirection: 'column',

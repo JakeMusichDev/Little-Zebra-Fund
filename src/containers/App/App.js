@@ -3,6 +3,9 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import Section from '../Section/Section'
 import Widget from '../Widget/Widget'
+import SectionContent from '../../components/SectionContent/SectionContent'
+
+import leopardImage from '../../assets/leopard-image.png'
 
 import { copy } from '../../utils/copy'
 
@@ -17,7 +20,7 @@ export default class App extends Component {
             <Widget />
           </Section>
           <Section copy={copy.infoSection} >
-
+            <SectionContent copy={copy.infoSection.content} image={leopardImage} />
           </Section>
         <Footer />
       </div>
