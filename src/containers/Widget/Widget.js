@@ -22,9 +22,7 @@ export default class Widget extends Component {
   }
 
   submitForm = (e) => {
-    this.setState({
-      open: false 
-    })
+    this.setState({open: false })
   }
 
   render () {
