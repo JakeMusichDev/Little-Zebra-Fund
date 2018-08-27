@@ -20,9 +20,11 @@ export const widgetStyles = StyleSheet.create({
     height: '100%',
     margin: '25px',
     [breakPoints.tablet]: {
+      margin: '0px',
       width: '100%',
     },
     [breakPoints.mobile]: {
+      margin: '0px',
       width: '100%',
     }
   },

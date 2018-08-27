@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
 import { css } from 'aphrodite'
 import { widgetStyles } from './Widget.style'
+import { colors } from '../../utils/styles'
 
 import Input from '../../components/Input/Input'
 import Banner from '../../components/Banner/Banner'
+import Dropdown from '../../components/Dropdown/Dropdown'
+
 import img from '../../assets/tiger-image.jpg'
 
 export default class Widget extends Component {
@@ -21,9 +24,9 @@ export default class Widget extends Component {
       <div className={css(widgetStyles.widgetContainer)}>
 
         <div className={css(widgetStyles.formContainer)}>
-          <h3 style={{color:'green', textAlign: 'center'}}>DONATE</h3>
+          <h3 style={{color:`${colors.green}`, textAlign: 'center'}}>MAKE A DONATION</h3>
           <Input>
-            <input type="text"/>
+            <Dropdown />
           </Input>
           <Input>
             <input type="text"/>
