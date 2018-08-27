@@ -14,5 +14,6 @@ export const colors = {
   widgetWhite: '#ffffff)', //(Widget Background)
   grey: '#474c55', // (Text, Secondary Buttons) 
   green: '#6db420', // (Primary Buttons, Widget Title)
-  yellow: '#fec01e' // (Tertiary Buttons, Page Border)
+  yellow: '#fec01e', // (Tertiary Buttons, Page Border)
+  white: '#fff'
 }
