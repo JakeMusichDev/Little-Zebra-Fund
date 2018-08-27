@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
-import { StyleSheet, css } from 'aphrodite'
-import {breakPoints, colors} from '../../utils/styles'
+import { css } from 'aphrodite'
+import { widgetStyles } from './Widget.style'
 
 import Input from '../../components/Input/Input'
+import Banner from '../../components/Banner/Banner'
 import img from '../../assets/tiger-image.jpg'
 
 export default class Widget extends Component {
@@ -15,13 +16,11 @@ export default class Widget extends Component {
     }
   }
 
-
-  
   render () {
     return (
-      <div className={css(styles.widgetContainer)}>
+      <div className={css(widgetStyles.widgetContainer)}>
 
-        <div className={css(styles.formContainer)}>
+        <div className={css(widgetStyles.formContainer)}>
           <h3 style={{color:'green', textAlign: 'center'}}>DONATE</h3>
           <Input>
             <input type="text"/>
@@ -36,54 +35,12 @@ export default class Widget extends Component {
             <input type="submit"/>
           </Input>
         </div>
-
-        <div className={css(styles.imageContainer)} style={{backgroundImage: `url(${img})`}} />
-
+        
+        <div className={css(widgetStyles.imageContainer)}>      
+          <Banner src={img} />
+        </div>
       </div>
     )
   }
 }
 
-const styles = StyleSheet.create({
-  widgetContainer: {
-    border: '1px solid pink',
-    height: '100%',
-    background: `white`,
-    display: 'flex',
-    flexDirection: 'row',
-    [breakPoints.tablet]: {
-      flexDirection: 'column',
-    },
-    [breakPoints.mobile]: {
-      flexDirection: 'column',
-    }
-  },
-  formContainer: {
-    width: '60%',
-    height: '100%',
-    margin: '25px',
-    [breakPoints.tablet]: {
-      width: '100%',
-    },
-    [breakPoints.mobile]: {
-      width: '100%',
-    }
-  },
-  imageContainer: {
-    background: 'pink',
-    width: '40%',
-    height: '250px',
-    display: 'flex',
-    backgroundImage: `url(${img})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-    backgroundRepeat: 'no-repeat',
-    [breakPoints.tablet]: {
-      width: '100%',
-    },
-    [breakPoints.mobile]: {
-      width: '100%',
-      padding: '0',
-    }
-  },
-})

@@ -1,7 +1,9 @@
 import React from 'react'
 import {StyleSheet, css} from 'aphrodite'
-import Banner from '../Banner/Banner'
 import {breakPoints, colors} from '../../utils/styles'
+
+import Banner from '../Banner/Banner'
+import Button from '../Button/Button'
 
 const SectionContent = props => {
   return (
@@ -9,7 +11,10 @@ const SectionContent = props => {
 
       <div className={css(styles.body)}>
         <div className={css(styles.bodyText)}>{props.copy}</div>
-        <div className={css(styles.bodyBtns)}></div>
+        {/* <div className={css(styles.bodyBtns)}> */}
+          <Button color={colors.grey} text={'OUR HISTORY'}/>
+          <Button color={colors.yellow} text={'GET INVOLVED'}/>
+        {/* </div> */}
       </div>
       <div className={css(styles.banner)}>
         <Banner src={props.image} />
@@ -36,6 +41,7 @@ const styles = StyleSheet.create({
     color: `${colors.grey}`,
     [breakPoints.tablet]: {
       width: '100%',
+      margin: '15px',
     },
     [breakPoints.mobile]: {
       width: '100%',
