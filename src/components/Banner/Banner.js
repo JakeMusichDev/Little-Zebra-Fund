@@ -5,19 +5,15 @@ const Banner = props => {
   const style = { 
     backgroundImage: `url(${props.src})`, 
     backgroundSize: 'cover', 
+    backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
-    height: '100px',
-    width: 'inherit'
+    height: '100%',
+    width: '100%'
   }
 
   return (
     <div style={style} />
   )
 }
-
-const bannerStyles = StyleSheet.create({
-  bannerContainer: {
-  }
-})
 
 export default Banner
