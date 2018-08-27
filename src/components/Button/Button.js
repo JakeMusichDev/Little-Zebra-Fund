@@ -16,7 +16,7 @@ const Button = props => {
   }
 
   return (
-    <button style={btnStyle}>{props.text}</button>
+    <button onClick={props.controlFunc} style={btnStyle}>{props.text}</button>
   )
 }
 

@@ -40,6 +40,9 @@ export default class Dropdown extends Component {
       <div className={css(styles.menu)} ref={(element) => {this.dropdownMenu = element}}>
         {buttons.map( (button) => <button value={button.title} onClick={this.selectItem} className={css(styles.btn)}> {button.title} </button>)}
       </div>
+                //   <select name="" id="">
+                //   <option value="sd">Giraffe</option>
+                // </select>
     )
   }
 
