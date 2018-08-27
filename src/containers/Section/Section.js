@@ -7,8 +7,8 @@ export default class Section extends Component {
     return (
       <div className={css(styles.sectionContainer)}>
         <div className={css(styles.body)}>
-          <div className={css(styles.header)}><h1>{this.props.copy.header}</h1></div>
-          <div className={css(styles.subheader)}><h4>{this.props.copy.subheader}</h4></div>
+          <div className={css(styles.header)}><h2>{this.props.copy.header.toUpperCase()}</h2></div>
+          <div className={css(styles.subheader)}><h5>{this.props.copy.subheader}</h5></div>
           <div className={css(styles.content)}>
             {this.props.children}
           </div>
@@ -40,5 +40,8 @@ const styles = StyleSheet.create({
       width: '100%',
       padding: '0%',
     }
+  },
+  header: {
+    color: `${colors.grey}`
   }
 })

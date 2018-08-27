@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
 import { StyleSheet, css } from 'aphrodite'
+import { colors } from '../../utils/styles'
 
 export default class Footer extends Component {
   render () {
     return (
       <div className={css(styles.footerContainer)}>
-        
+        Footer
       </div>
     )
   }
@@ -19,5 +20,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignContent: 'center',
+    background: `${colors.grey}`,
+    color: `white`
   }
 })
