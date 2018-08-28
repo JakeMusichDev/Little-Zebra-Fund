@@ -6,7 +6,7 @@ But everyone really loves Giraffes. And Rhinos. And Tigers.
 ## Setup :boom:
 
 ```
-git clone 
+git clone git@github.com:JakeMusichDev/Little-Zebra-Fund.git
 yarn install 
 yarn start 
 ```
