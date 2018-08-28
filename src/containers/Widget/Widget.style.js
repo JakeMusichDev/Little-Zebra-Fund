@@ -3,7 +3,6 @@ import {breakPoints, colors} from '../../utils/styles'
 
 export const widgetStyles = StyleSheet.create({
   widgetContainer: {
-    border: '1px solid pink',
     height: '100%',
     background: `white`,
     display: 'flex',
@@ -14,6 +13,12 @@ export const widgetStyles = StyleSheet.create({
     [breakPoints.mobile]: {
       flexDirection: 'column',
     }
+  },
+  header: {
+    textAlign: 'center',
+    color: `${colors.green}`,
+    fontSize: 18,
+    margin: '25px 0px'
   },
   formContainer: {
     width: '60%',
@@ -31,15 +36,17 @@ export const widgetStyles = StyleSheet.create({
   imageContainer: {
     background: 'pink',
     width: '40%',
-    height: '250px',
+    // height: '250px',
     display: 'flex',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     [breakPoints.tablet]: {
+    height: '250px',
       width: '100%',
     },
     [breakPoints.mobile]: {
+    height: '250px',
       width: '100%',
       padding: '0',
     }

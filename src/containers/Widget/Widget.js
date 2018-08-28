@@ -9,7 +9,11 @@ import Button from '../../components/Button/Button'
 import WidgetDropdown from '../../components/WidgetDropdown/WidgetDropdown'
 import WidgetButtonGroup from '../../components/WidgetButtonGroup/WidgetButtonGroup'
 import WidgetCheckbox from '../../components/WidgetCheckbox/WidgetCheckbox'
-import img from '../../assets/tiger-image.jpg'
+import giraffe from '../../assets/giraffe-image.jpg'
+import tiger from '../../assets/tiger-image.jpg'
+import rhino from '../../assets/rhino-image.jpg'
+
+const animalData = [ {name: 'giraffe', image: giraffe}, {name:'rhino', image:rhino}, {name:'tiger', image:tiger} ]
 
 export default class Widget extends Component {
   constructor (props) {
@@ -17,36 +21,40 @@ export default class Widget extends Component {
     
     this.state = {
       open: true,
-      activeAnimal: {name: 'Giraffe', image: img}
+      activeAnimal: animalData[0]
     }
   }
 
+  setActiveAnimal = (e) => {
+    this.setState({activeAnimal: e[0]})
+  }
+
   submitForm = (e) => {
-    this.setState({open: false })
+    this.setState({ open: false })
   }
 
   render () {
     return (
       <div className={css(widgetStyles.widgetContainer)}>
-
         <div className={css(widgetStyles.formContainer)}>
-          <h3 style={{color:`${colors.green}`, textAlign: 'center'}}>MAKE A DONATION</h3>
+          <div className={css(widgetStyles.header)}>MAKE A DONATION</div>
           <Input>
-            <WidgetDropdown />
+            <WidgetDropdown controlFunc={this.setActiveAnimal} animalData={animalData} />
           </Input>
+          <Input><WidgetButtonGroup /></Input>
+          <Input><WidgetCheckbox /></Input>
           <Input>
-            <WidgetButtonGroup />
-          </Input>
-          <Input>
-            <WidgetCheckbox />
-          </Input>
-          <Input>
-            <Button controlFunc={this.submitForm} text={"DONATE NOW"} color={colors.green} margin={"0px"}/>
+            <Button 
+              controlFunc={this.submitForm} 
+              text={"DONATE NOW"} 
+              color={colors.green} 
+              margin={"0px"}
+            />
           </Input>
         </div>
         
         <div className={css(widgetStyles.imageContainer)}>      
-          <Banner src={img} />
+          <Banner src={this.state.activeAnimal.image} />
         </div>
       </div>
     )

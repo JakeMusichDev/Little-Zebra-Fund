@@ -10,6 +10,7 @@ const Button = props => {
     background: `${props.color}`,
     border: 'none',
     borderBottom: '3px solid green',
+    outline: 'none',
     ":hover": {
       background: 'red'
     }
