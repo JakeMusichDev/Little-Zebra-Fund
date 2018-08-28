@@ -7,8 +7,6 @@ import Logo from '../../components/Logo/Logo'
 import LinkGroup from '../../components/LinkGroup/LinkGroup'
 import Button from '../../components/Button/Button'
 
-
-
 export default class Header extends Component {
   render () {
     return (
@@ -25,7 +23,6 @@ export default class Header extends Component {
           </div>
         </div>
       </div>
-
     )
   }
 }
