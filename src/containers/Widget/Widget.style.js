@@ -34,9 +34,7 @@ export const widgetStyles = StyleSheet.create({
     }
   },
   imageContainer: {
-    background: 'pink',
     width: '40%',
-    // height: '250px',
     display: 'flex',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',

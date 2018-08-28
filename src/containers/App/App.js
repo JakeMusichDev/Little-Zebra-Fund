@@ -20,10 +20,7 @@ export default class App extends Component {
             <Widget />
           </Section>
           <Section copy={copy.infoSection} bgColor={colors.white} >
-            <SectionContent 
-              copy={copy.infoSection.content} 
-              image={leopardImage} 
-            />
+            <SectionContent copy={copy.infoSection.content} image={leopardImage} />
           </Section>
         <Footer />
       </div>

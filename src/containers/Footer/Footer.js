@@ -1,14 +1,11 @@
 import React, {Component} from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import { colors } from '../../utils/styles'
+import { footerData } from '../../utils/data'
+
 import Logo from '../../components/Logo/Logo'
 import LinkGroup from '../../components/LinkGroup/LinkGroup'
 
-import twitter from '../../assets/twitter-logo.svg'
-import fb from '../../assets/facebook-logo.svg'
-import youtube from '../../assets/youtube-logo.svg'
-
-import { footerData } from '../../utils/data'
 
 export default class Footer extends Component {
   render () {
