@@ -9,15 +9,11 @@ const Button = props => {
     color: 'white',
     background: `${props.color}`,
     border: 'none',
-    borderBottom: '3px solid green',
-    outline: 'none',
-    ":hover": {
-      background: 'red'
-    }
+    borderBottom: '2px solid green',
   }
 
   return (
-    <button onClick={props.controlFunc} style={btnStyle}>{props.text}</button>
+    <button className='button' onClick={props.controlFunc} style={btnStyle}>{props.text}</button>
   )
 }
 

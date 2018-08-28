@@ -11,10 +11,10 @@ const SectionContent = props => {
 
       <div className={css(styles.body)}>
         <div className={css(styles.bodyText)}>{props.copy}</div>
-        {/* <div className={css(styles.bodyBtns)}> */}
-          <Button color={colors.grey} text={'OUR HISTORY'} margin={"5px"}/>
-          <Button color={colors.yellow} text={'GET INVOLVED'} margin={"5px"}/>
-        {/* </div> */}
+        <div className={css(styles.bodyBtns)}>
+          <Button color={colors.grey} text={'OUR HISTORY'} margin={"10px"}/>
+          <Button color={colors.yellow} text={'GET INVOLVED'} margin={"10px"}/>
+        </div>
       </div>
       <div className={css(styles.banner)}>
         <Banner src={props.image} />
@@ -46,6 +46,17 @@ const styles = StyleSheet.create({
     [breakPoints.mobile]: {
       width: '100%',
       margin: '5px',
+    }
+  },
+  bodyBtns: {
+    marginTop: '2%',
+    [breakPoints.tablet]: {
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    [breakPoints.mobile]: {
+      display: 'flex',
+      justifyContent: 'center'
     }
   },
   banner: {

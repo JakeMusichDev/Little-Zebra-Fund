@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 12,
-    width: '20%',
+    width: '25%',
     display: 'inherit',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     }
   },
   selectContainer: {
-    width: '80%',
+    width: '75%',
     [breakPoints.tablet]: {
       width: '100%'
     },

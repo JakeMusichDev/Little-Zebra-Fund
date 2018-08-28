@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import { colors } from '../../utils/styles'
+
+
 import Logo from '../../components/Logo/Logo'
 import LinkGroup from '../../components/LinkGroup/LinkGroup'
+import Button from '../../components/Button/Button'
 
-const menuItems = ['what we do', 'get involved', 'shop', 'news']
+const menuItems = ['What We Do', 'Get Involved', 'Shop', 'News']
 
 export default class Header extends Component {
   render () {
@@ -14,6 +17,12 @@ export default class Header extends Component {
         <div className={css(styles.headerContainer)}>
           <Logo light={false} />
           <LinkGroup links={menuItems} vertical={false} type={'text'} />
+          <div className={css(styles.headerEl)}>
+            <input type="text" className={css(styles.headerInput)} placeholder='Search here' />
+          </div>
+          <div className={css(styles.headerEl)}>
+            <Button color={colors.green} text={'DONATE NOW'} margin={'0px'}/>
+          </div>
         </div>
       </div>
 
@@ -36,5 +45,15 @@ const styles = StyleSheet.create({
     width: 'inherit',
     background: `${colors.yellow}`,
     height: '5px'
+  },
+  headerEl: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignContent: 'center',
+    padding: '5px'
+  },
+  headerInput: {
+    height: 25,
   }
 })
