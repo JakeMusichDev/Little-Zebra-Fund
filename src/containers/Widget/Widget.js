@@ -9,11 +9,8 @@ import Button from '../../components/Button/Button'
 import WidgetDropdown from '../../components/WidgetDropdown/WidgetDropdown'
 import WidgetButtonGroup from '../../components/WidgetButtonGroup/WidgetButtonGroup'
 import WidgetCheckbox from '../../components/WidgetCheckbox/WidgetCheckbox'
-import giraffe from '../../assets/giraffe-image.jpg'
-import tiger from '../../assets/tiger-image.jpg'
-import rhino from '../../assets/rhino-image.jpg'
 
-const animalData = [ {name: 'giraffe', image: giraffe}, {name:'rhino', image:rhino}, {name:'tiger', image:tiger} ]
+import {animalFormData} from '../../utils/data'
 
 export default class Widget extends Component {
   constructor (props) {
@@ -21,7 +18,7 @@ export default class Widget extends Component {
     
     this.state = {
       open: true,
-      activeAnimal: animalData[0]
+      activeAnimal: animalFormData[0]
     }
   }
 
@@ -39,7 +36,7 @@ export default class Widget extends Component {
         <div className={css(widgetStyles.formContainer)}>
           <div className={css(widgetStyles.header)}>MAKE A DONATION</div>
           <Input>
-            <WidgetDropdown controlFunc={this.setActiveAnimal} animalData={animalData} />
+            <WidgetDropdown controlFunc={this.setActiveAnimal} animalData={animalFormData} />
           </Input>
           <Input><WidgetButtonGroup /></Input>
           <Input><WidgetCheckbox /></Input>

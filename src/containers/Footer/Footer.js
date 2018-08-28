@@ -8,17 +8,13 @@ import twitter from '../../assets/twitter-logo.svg'
 import fb from '../../assets/facebook-logo.svg'
 import youtube from '../../assets/youtube-logo.svg'
 
-const whoWeAre = ['Our history', 'Press centre', 'Contact us']
-const involved = ['Join us', 'Donate', 'Careers', 'Shop']
-const socials = [twitter, fb, youtube]
+import { footerData } from '../../utils/data'
 
 export default class Footer extends Component {
   render () {
     return (
       <div className={css(styles.footerContainer)}>
-        <LinkGroup header={'who we are'} links={whoWeAre} vertical={true} type={'text'} />
-        <LinkGroup header={'get involved'} links={involved} vertical={true} type={'text'} />
-        <LinkGroup header={'follow  us'} links={socials} vertical={true} type={'image'} />
+        {footerData.map( group => <LinkGroup key={group.header} header={group.header} links={group.links} vertical={group.vertical} type={group.type}/>)}
         <div className={css(styles.right)}>
           <Logo light={true} />
           <AddressBlock />
