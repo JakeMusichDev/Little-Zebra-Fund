@@ -9,7 +9,7 @@ const LinkGroup = props => {
     return (
       <div className={css(linkGroupStyles.main, flexDirection)}>
         {header}
-        { props.links.map( link => <div className={css(linkGroupStyles.linkContainer)}><p className={css(linkGroupStyles.link)}>{link}</p></div> )}
+        { props.links.map( link => <div key={`link-${link}`}  className={css(linkGroupStyles.linkContainer)}><p className={css(linkGroupStyles.link)}>{link}</p></div> )}
       </div>
     )
   } else {
@@ -27,11 +27,10 @@ const linkGroupStyles = StyleSheet.create({
     margin: '0 25px',
   },
   header: {
-    fontSize: 10,
+    fontSize: 9,
     margin: 5,
     marginBottom: '10px',
   },
-
   linkContainer: {
     display: 'flex',
   },

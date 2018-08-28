@@ -54,7 +54,8 @@ const styles = StyleSheet.create({
   addressBlock: {
     fontSize: 9,
     opacity: 0.8,
-    padding: '10px'
+    padding: '10px',
+    marginLeft: '20%'
   },
   right: {
     marginLeft: '15%'

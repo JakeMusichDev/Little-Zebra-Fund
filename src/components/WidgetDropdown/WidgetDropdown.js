@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {StyleSheet, css} from 'aphrodite';
 import { breakPoints } from '../../utils/styles'
-const buttons = [{title:'giraffe'}, {title:'leopard'}, {title:'panther'}]
 
 export default class WidgetDropdown extends Component {
   constructor() {

@@ -9,6 +9,7 @@ const Banner = props => {
     backgroundRepeat: 'no-repeat',
     height: '100%',
     width: '100%',
+    transition: '0.2s all'
   }
   
   return (

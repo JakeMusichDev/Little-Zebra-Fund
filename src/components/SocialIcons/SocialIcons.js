@@ -4,7 +4,7 @@ import {StyleSheet, css} from 'aphrodite'
 const SocialIcons = props => {
   return (
     <div className={css(styles.main)}>
-      {props.icons.map( icon => <img className={css(styles.icon)} src={icon} alt=""/>)}
+      {props.icons.map( icon => <img key={`icon-${icon}`} className={css(styles.icon)} src={icon} alt=""/>)}
     </div>
   )
 }

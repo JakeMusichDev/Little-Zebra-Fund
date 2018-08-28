@@ -17,15 +17,29 @@ export default class WidgetButtonGroup extends Component {
   }
 
   selectItem = (e) => {
-    this.setState({ activeButton: e.target.value, inputActive: false, inputValid: false})
+    this.setState({ 
+      activeButton: e.target.value, 
+      inputActive: false, 
+      inputValid: false, 
+      value: ''
+    })
   }
 
   onTextInput = (e) => {
-
     if(e.target.value < 11 || /[^0-9]/.test(e.target.value) ) {
-      this.setState({ value: e.target.value, activeButton: null, inputActive: true, inputValid: false })    
+      this.setState({ 
+        value: e.target.value, 
+        activeButton: null, 
+        inputActive: true, 
+        inputValid: false 
+      })    
     } else {
-      this.setState({ value: e.target.value, activeButton: null, inputActive: true, inputValid: true })
+      this.setState({ 
+        value: e.target.value, 
+        activeButton: null, 
+        inputActive: true, 
+        inputValid: true
+      })
     }
   }
   
@@ -40,6 +54,7 @@ export default class WidgetButtonGroup extends Component {
           <div className={css(styles.buttonGroup)}>
             {buttons.map( (button) => { 
               return <button 
+                key={`button-${button}`} 
                 value={button}
                 onClick={this.selectItem} 
                 className={css(this.state.activeButton === button ? activeButtonStyle : styles.button)}
@@ -49,7 +64,13 @@ export default class WidgetButtonGroup extends Component {
             })}
           </div>
           <div className={css(styles.separator)}><div>or</div></div>
-          <input className={css(this.state.inputActive ? activeInput : styles.textInput)} type="text" placeholder='$' onChange={this.onTextInput}/>
+          <input
+            value={this.state.value}
+            className={css(this.state.inputActive ? activeInput : styles.textInput)} 
+            type="text" 
+            placeholder='$' 
+            onChange={this.onTextInput}
+          />
         </div>
 
       </div>
@@ -101,7 +122,8 @@ const styles = StyleSheet.create({
   },
   textInput: {
     width: '47%',
-    outline: 'none'
+    outline: 'none',
+    paddingLeft: '1%'
   },
   valid: {
     border: '2px solid green'

@@ -25,7 +25,6 @@ const SectionContent = props => {
 
 const styles = StyleSheet.create({
   sectionContentContainer: {
-    // border: '1px solid purple',
     display: 'flex',
     [breakPoints.tablet]: {
       display: 'block'

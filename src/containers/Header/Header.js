@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import { colors } from '../../utils/styles'
 
-
 import Logo from '../../components/Logo/Logo'
 import LinkGroup from '../../components/LinkGroup/LinkGroup'
 import Button from '../../components/Button/Button'

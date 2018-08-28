@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {StyleSheet, css} from 'aphrodite';
 
-const buttons = [{title:'giraffe'}, {title:'leopard'}, {title:'panther'}]
-
 export default class WidgetCheckbox extends Component {
   constructor() {
     super();

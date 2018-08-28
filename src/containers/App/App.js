@@ -10,8 +10,6 @@ import leopardImage from '../../assets/leopard-image.png'
 import { copy } from '../../utils/copy'
 import { colors } from '../../utils/styles'
 
-import './App.css';
-
 export default class App extends Component {
   render() {
     return (
