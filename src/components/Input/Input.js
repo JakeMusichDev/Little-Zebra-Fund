@@ -13,9 +13,6 @@ const Input = (props) => {
 const inputStyle = StyleSheet.create({
   inputContainer: {
     display: 'flex',
-    // justifyContent: 'center',
-    // alignContent: 'center',
-    // border: '1px solid purple',
     padding: '15px 8%',
     [breakPoints.tablet]: { paddingTop: '2%'},
     [breakPoints.mobile]: { paddingTop: '1%' }

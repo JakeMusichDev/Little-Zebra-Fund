@@ -24,10 +24,8 @@ const styles = StyleSheet.create({
     padding: '30px 0px',
     overflow: 'hidden',
     [breakPoints.tablet]: {
-      border: '1px solid green' ,
     },
     [breakPoints.mobile]: {
-      border: '1px solid blue' ,
       padding: '0',
     }
   },

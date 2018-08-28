@@ -5,18 +5,16 @@ const Button = props => {
   const btnStyle = {
     height: 30,
     width: 100,
-    margin: 5,
+    cursor: 'pointer',
+    marginRight: `${props.margin}`,
     color: 'white',
     background: `${props.color}`,
     border: 'none',
-    borderBottom: '3px solid green',
-    ":hover": {
-      background: 'red'
-    }
+    borderBottom: '2px solid green',
   }
 
   return (
-    <button onClick={props.controlFunc} style={btnStyle}>{props.text}</button>
+    <button className='button' onClick={props.controlFunc} style={btnStyle}>{props.text}</button>
   )
 }
 

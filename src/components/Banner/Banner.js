@@ -8,9 +8,10 @@ const Banner = props => {
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     height: '100%',
-    width: '100%'
+    width: '100%',
+    transition: '0.2s all'
   }
-
+  
   return (
     <div style={style} />
   )
